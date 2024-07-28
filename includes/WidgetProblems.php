@@ -418,10 +418,9 @@ class WidgetProblems extends CTableInfo {
 
 
 
-			$row->addItem([
-				$empty_col,
-				$empty_col->addClass(ZBX_STYLE_THIRD_COL)
-			]);
+			$row->addItem(
+				'Test'
+			);
 
 
 
