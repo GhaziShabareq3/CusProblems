@@ -22,7 +22,6 @@ use CTableInfo,
 
 use Widgets\Problems\Widget;
 
-$icon_path = '..\imgs\NAMUR  Check Function.png'; // Replace with the actual path to your icon directory
 
 class WidgetProblems extends CTableInfo {
 	private array $data;
@@ -447,9 +446,10 @@ class WidgetProblems extends CTableInfo {
 				}
 			}
 			// begin New changes
+			$icon_path =  '../imgs/NAMUR_Failure.png' 
 			$icon_col = (new CCol())
 			->addClass('icon-class') // Add your desired class for styling
-			->addItem(new CImg('../imgs/NAMUR  Failure.png')); // Add the icon image
+			->addItem(new CImg($icon_path)); // Add the icon image
 		
 		$row->addItem([
 			$icon_col, // Add the icon column first
