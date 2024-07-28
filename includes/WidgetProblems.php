@@ -159,13 +159,13 @@ class WidgetProblems extends CTableInfo {
 	 */
 	private function addProblemsToTable(array $problems, array $data, $nested): void {
 		 // Define mapping of severity to icon filenames
-		 $severity_to_icon = [
-			'Check Function' => 'Check Function.png',
-			'Diagnostics Active' => 'Diagnostics Active.png',
-			'Maintenance Required' => 'Maintenance Required.png'
-			'Out of Specification' => 'Out of Specification.png'
-			'Failure' => 'Failure.png'
-		];
+		//  $severity_to_icon = [
+		// 	'Check Function' => 'Check Function.png',
+		// 	'Diagnostics Active' => 'Diagnostics Active.png',
+		// 	'Maintenance Required' => 'Maintenance Required.png'
+		// 	'Out of Specification' => 'Out of Specification.png'
+		// 	'Failure' => 'Failure.png'
+		// ];
 
 		foreach ($problems as $problem) {
 			$trigger = $data['triggers'][$problem['objectid']];
