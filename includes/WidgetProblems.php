@@ -171,6 +171,28 @@ class WidgetProblems extends CTableInfo {
 			$trigger = $data['triggers'][$problem['objectid']];
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 			$cell_clock = ($problem['clock'] >= $data['today'])
 				? zbx_date2str(TIME_FORMAT_SECONDS, $problem['clock'])
 				: zbx_date2str(DATE_TIME_FORMAT_SECONDS, $problem['clock']);
