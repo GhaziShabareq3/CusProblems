@@ -1,0 +1,20 @@
+{
+	"manifest_version": 2.0,
+	"id": "CusProblems",
+	"type": "widget",
+	"name": "CusProblems",
+	"namespace": "CusProblems",
+	"version": "1.0",
+	"author": "NOT Zabbix SIA",
+	"widget": {
+		"js_class": "CWidgetProblems"
+	},
+	"actions": {
+		"widget.CusProblems.view": {
+			"class": "WidgetView"
+		}
+	},
+	"assets": {
+		"js": ["class.widget.js"]
+	}
+}
