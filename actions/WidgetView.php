@@ -1,6 +1,6 @@
 <?php declare(strict_types = 0);
 
-namespace Widgets\CusProblems\Actions;
+namespace Modules\CusProblems\Actions;
 
 use CControllerDashboardWidgetView,
 	CControllerResponseData,

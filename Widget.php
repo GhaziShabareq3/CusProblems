@@ -1,6 +1,6 @@
 <?php declare(strict_types = 0);
 
-namespace Widgets\CusProblems;
+namespace Modules\CusProblems;
 
 use Zabbix\Core\CWidget;
 

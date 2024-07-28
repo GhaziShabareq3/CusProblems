@@ -1,7 +1,7 @@
 <?php declare(strict_types = 0);
 
 
-namespace Widgets\CusProblems\Includes;
+namespace Modules\CusProblems\Includes;
 
 use Zabbix\Widgets\{
 	CWidgetField,

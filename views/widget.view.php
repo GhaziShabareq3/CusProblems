@@ -7,7 +7,7 @@
  * @var array $data
  */
 
-use Widgets\CusProblems\Includes\WidgetProblems;
+use Modules\CusProblems\Includes\WidgetProblems;
 
 $item = new WidgetProblems($data);
 
