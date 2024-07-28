@@ -57,8 +57,7 @@ class WidgetProblems extends CTableInfo {
 		elseif ($this->data['show_two_columns']) {
 			$header[] = new CColHeader();
 		}
-		$header[] = new CColHeader('Icon');
-
+		
 		if ($show_timeline) {
 			$header[] = $header_time->addClass(ZBX_STYLE_RIGHT);
 			$header[] = (new CColHeader())->addClass(ZBX_STYLE_TIMELINE_TH);
@@ -67,6 +66,7 @@ class WidgetProblems extends CTableInfo {
 		else {
 			$header[] = $header_time;
 		}
+		$header[] = new CColHeader('Icon');
 
 		$this->setHeader(array_merge($header, [
 			$show_recovery_data
