@@ -22,6 +22,8 @@ use CTableInfo,
 
 use Widgets\Problems\Widget;
 
+$icon_path = '..\imgs\NAMUR  Check Function.png'; // Replace with the actual path to your icon directory
+
 class WidgetProblems extends CTableInfo {
 	private array $data;
 
@@ -90,6 +92,7 @@ class WidgetProblems extends CTableInfo {
 				? _x('Operational data', 'compact table header')
 				: null,
 			_x('Duration', 'compact table header'),
+			_x('Icon', 'compact table header'),
 			_('Update'),
 			_x('Actions', 'compact table header'),
 			$this->data['fields']['show_tags'] ? _x('Tags', 'compact table header') : null
@@ -498,6 +501,7 @@ class WidgetProblems extends CTableInfo {
 				makeEventActionsIcons($problem['eventid'], $data['actions'], $data['users'], $is_acknowledged),
 				$data['fields']['show_tags'] ? $data['tags'][$problem['eventid']] : null
 			]);
+			
 
 			$this->addRow($row);
 
