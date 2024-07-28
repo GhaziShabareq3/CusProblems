@@ -58,6 +58,52 @@ class WidgetView extends CControllerDashboardWidgetView {
 			'show_opdata' => $this->fields_values['show_opdata']
 		]);
 
+
+
+
+
+
+
+
+
+
+// Adding icons based on severity
+foreach ($data['problems'] as &$problem) {
+    switch ($problem['severity']) {
+      case 1: // Information
+        $problem['icon'] = '../imgs/Check Function.png';
+        break;
+      case 2: // Warning
+        $problem['icon'] = '../imgs/Diagnostics Active.png';
+        break;
+      case 3: // Average
+        $problem['icon'] = '../imgs/Maintenance Required.png';
+        break;
+      case 4: // High
+        $problem['icon'] = '../imgs/Out of Specification.png';
+        break;
+      case 5: // Disaster
+        $problem['icon'] = '../imgs/Failure.png';
+        break;
+      default:
+        $problem['icon'] = 'default_icon.png';
+    }
+  }
+ 
+  // The rest of your code remains unchanged...
+
+
+
+
+
+
+
+
+
+
+
+
+
 		$data += [
 			'show_three_columns' => false,
 			'show_two_columns' => false
