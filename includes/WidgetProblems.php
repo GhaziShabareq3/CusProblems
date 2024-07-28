@@ -158,6 +158,15 @@ class WidgetProblems extends CTableInfo {
 	 * @param bool       $nested                                If true, show the symptom rows with indentation.
 	 */
 	private function addProblemsToTable(array $problems, array $data, $nested): void {
+		 // Define mapping of severity to icon filenames
+		 $severity_to_icon = [
+			'Check Function' => 'Check Function.png',
+			'Diagnostics Active' => 'Diagnostics Active.png',
+			'Maintenance Required' => 'Maintenance Required.png'
+			'Out of Specification' => 'Out of Specification.png'
+			'Failure' => 'Failure.png'
+		];
+
 		foreach ($problems as $problem) {
 			$trigger = $data['triggers'][$problem['objectid']];
 
@@ -167,15 +176,26 @@ class WidgetProblems extends CTableInfo {
 
 
 
-			
+
 
 
 
 
 			//new code
-			$icon_path = "../imgs/NAMUR_Failure.png";
-			//$icon_path = '/path/to/imgs/icon_' . $problem['severity'] . '.png';
-			$icon = new CCol((new CImg($icon_path))->setAttribute('alt', 'Severity Icon'));
+			$severity = $problem['severity']; // Assuming severity is a string
+			$icon_filename = isset($severity_to_icon[$severity]) ? $severity_to_icon[$severity] : 'default_icon.png';
+	
+			// Construct the path to the icon image
+			$base_dir = dirname(__DIR__); // Goes up one level from the 'includes' directory
+			$icon_path = $base_dir . '/imgs/' . $icon_filename;
+	
+			// Check if the file exists and use it, otherwise handle the error (e.g., use a default icon)
+			if (file_exists($icon_path)) {
+				$icon = new CCol((new CImg($icon_path))->setAttribute('alt', 'Severity Icon'));
+			} else {
+				// Handle missing file case
+				$icon = new CCol('No Icon');
+			}
 	
 			// Add the icon column to the row
 			$row->addItem($icon);
@@ -187,6 +207,7 @@ class WidgetProblems extends CTableInfo {
 	
 			// Add the completed row to the table
 			$this->addRow($row);
+	
 			//new code
 
 
