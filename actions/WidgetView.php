@@ -71,22 +71,22 @@ class WidgetView extends CControllerDashboardWidgetView {
 foreach ($data['problems'] as &$problem) {
     switch ($problem['severity']) {
       case 1: // Information
-        $problem['icon'] = 'info-icon.png';
+        $problem['icon'] = '../imgs/Check Function.png';
         break;
       case 2: // Warning
-        $problem['icon'] = 'warning-icon.png';
+        $problem['icon'] = '../imgs/Diagnostics Active.png';
         break;
       case 3: // Average
-        $problem['icon'] = 'average-icon.png';
+        $problem['icon'] = '../imgs/Maintenance Required.png';
         break;
       case 4: // High
-        $problem['icon'] = 'high-icon.png';
+        $problem['icon'] = '../imgs/Out of Specification.png';
         break;
       case 5: // Disaster
-        $problem['icon'] = 'disaster-icon.png';
+        $problem['icon'] = '../imgs/Failure.png';
         break;
       default:
-        $problem['icon'] = 'default-icon.png';
+        $problem['icon'] = 'default_icon.png';
     }
   }
  
