@@ -70,19 +70,19 @@ class WidgetView extends CControllerDashboardWidgetView {
 // Adding icons based on severity
 foreach ($data['problems'] as &$problem) {
     switch ($problem['severity']) {
-      case 1: // Information
+      case 'Check Function': // Information
         $problem['icon'] = '../imgs/Check Function.png';
         break;
-      case 2: // Warning
+      case 'Diagnostics Active': // Warning
         $problem['icon'] = '../imgs/Diagnostics Active.png';
         break;
-      case 3: // Average
+      case 'Maintenance Required': // Average
         $problem['icon'] = '../imgs/Maintenance Required.png';
         break;
-      case 4: // High
+      case 'Out of Speifications': // High
         $problem['icon'] = '../imgs/Out of Specification.png';
         break;
-      case 5: // Disaster
+      case 'Failure': // Disaster
         $problem['icon'] = '../imgs/Failure.png';
         break;
       default:

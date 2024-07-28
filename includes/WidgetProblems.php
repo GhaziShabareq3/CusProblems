@@ -66,7 +66,6 @@ class WidgetProblems extends CTableInfo {
 		else {
 			$header[] = $header_time;
 		}
-		$header[] = new CColHeader('Icon');
 
 		$this->setHeader(array_merge($header, [
 			$show_recovery_data
@@ -117,6 +116,7 @@ class WidgetProblems extends CTableInfo {
 					->addClass(ZBX_STYLE_LIST_TABLE_FOOTER)
 			]);
 		}
+		$header[] = new CColHeader('Icon');
 	}
 
 	/**
@@ -169,28 +169,6 @@ class WidgetProblems extends CTableInfo {
 
 		foreach ($problems as $problem) {
 			$trigger = $data['triggers'][$problem['objectid']];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 			$cell_clock = ($problem['clock'] >= $data['today'])
