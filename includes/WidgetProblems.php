@@ -47,7 +47,7 @@ class WidgetProblems extends CTableInfo {
 			: _x('Time', 'compact table header')))->addStyle('width: 120px;');
 
 		$header = [];
-		$header[] = new CColHeader('Icon');
+		
 
 		if ($this->data['show_three_columns']) {
 			$header[] = new CColHeader();
@@ -58,6 +58,7 @@ class WidgetProblems extends CTableInfo {
 		elseif ($this->data['show_two_columns']) {
 			$header[] = new CColHeader();
 		}
+		$header[] = new CColHeader('Icon');
 		
 		if ($show_timeline) {
 			$header[] = $header_time->addClass(ZBX_STYLE_RIGHT);
