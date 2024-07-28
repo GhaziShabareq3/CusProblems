@@ -57,6 +57,7 @@ class WidgetProblems extends CTableInfo {
 		elseif ($this->data['show_two_columns']) {
 			$header[] = new CColHeader();
 		}
+		$header[] = new CColHeader('Icon');
 
 		if ($show_timeline) {
 			$header[] = $header_time->addClass(ZBX_STYLE_RIGHT);
@@ -446,19 +447,19 @@ class WidgetProblems extends CTableInfo {
 				}
 			}
 			// begin New changes
-			$icon_path =  '../imgs/NAMUR_Failure.png' 
-			$icon_col = (new CCol())
-			->addClass('icon-class') // Add your desired class for styling
-			->addItem(new CImg($icon_path)); // Add the icon image
+		// 	$icon_path =  '../imgs/NAMUR_Failure.png' 
+		// 	$icon_col = (new CCol())
+		// 	->addClass('icon-class') // Add your desired class for styling
+		// 	->addItem(new CImg($icon_path)); // Add the icon image
 		
-		$row->addItem([
-			$icon_col, // Add the icon column first
-			$cell_clock->addClass(ZBX_STYLE_TIMELINE_DATE),
-			(new CCol())
-				->addClass(ZBX_STYLE_TIMELINE_AXIS)
-				->addClass(ZBX_STYLE_TIMELINE_DOT),
-			(new CCol())->addClass(ZBX_STYLE_TIMELINE_TD)
-		]);
+		// $row->addItem([
+		// 	$icon_col, // Add the icon column first
+		// 	$cell_clock->addClass(ZBX_STYLE_TIMELINE_DATE),
+		// 	(new CCol())
+		// 		->addClass(ZBX_STYLE_TIMELINE_AXIS)
+		// 		->addClass(ZBX_STYLE_TIMELINE_DOT),
+		// 	(new CCol())->addClass(ZBX_STYLE_TIMELINE_TD)
+		// ]);
 		
 			// end New changes
 
