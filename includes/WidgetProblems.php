@@ -418,16 +418,16 @@ class WidgetProblems extends CTableInfo {
 
 
 
-			$row->addItem(
-				'Test'
-			);
+
 
 
 
 
 			if ($problem['cause_eventid'] == 0) {
 				$row = new CRow();
-
+				$row->addItem(
+					'Test'
+				);
 				if ($problem['symptom_count'] > 0) {
 					// Show symptom counter and collapse/expand button.
 					$symptom_count_col = (new CCol(
