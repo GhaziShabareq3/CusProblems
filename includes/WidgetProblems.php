@@ -47,6 +47,7 @@ class WidgetProblems extends CTableInfo {
 			: _x('Time', 'compact table header')))->addStyle('width: 120px;');
 
 		$header = [];
+		$header[] = new CColHeader('Icon');
 
 		if ($this->data['show_three_columns']) {
 			$header[] = new CColHeader();
@@ -116,7 +117,7 @@ class WidgetProblems extends CTableInfo {
 					->addClass(ZBX_STYLE_LIST_TABLE_FOOTER)
 			]);
 		}
-		$header[] = new CColHeader('Icon');
+	
 	}
 
 	/**
@@ -412,6 +413,18 @@ class WidgetProblems extends CTableInfo {
 			}
 
 			// Build rows and columns.
+
+
+
+
+			$row->addItem([
+				$empty_col,
+				$empty_col->addClass(ZBX_STYLE_THIRD_COL)
+			]);
+
+
+
+
 			if ($problem['cause_eventid'] == 0) {
 				$row = new CRow();
 
