@@ -181,36 +181,6 @@ class WidgetProblems extends CTableInfo {
 
 
 
-			//new code
-			$severity = $problem['severity']; // Assuming severity is a string
-			$icon_filename = isset($severity_to_icon[$severity]) ? $severity_to_icon[$severity] : 'default_icon.png';
-	
-			// Construct the path to the icon image
-			$base_dir = dirname(__DIR__); // Goes up one level from the 'includes' directory
-			$icon_path = $base_dir . '/imgs/' . $icon_filename;
-	
-			// Check if the file exists and use it, otherwise handle the error (e.g., use a default icon)
-			if (file_exists($icon_path)) {
-				$icon = new CCol((new CImg($icon_path))->setAttribute('alt', 'Severity Icon'));
-			} else {
-				// Handle missing file case
-				$icon = new CCol('No Icon');
-			}
-	
-			// Add the icon column to the row
-			$row->addItem($icon);
-	
-			// Continue adding other columns to the row as needed
-			$row->addItem($cell_clock);
-			$row->addItem($description);
-			// Other columns...
-	
-			// Add the completed row to the table
-			$this->addRow($row);
-	
-			//new code
-
-
 
 
 
@@ -507,22 +477,6 @@ class WidgetProblems extends CTableInfo {
 					);
 				}
 			}
-			// begin New changes
-		// 	$icon_path =  '../imgs/NAMUR_Failure.png' 
-		// 	$icon_col = (new CCol())
-		// 	->addClass('icon-class') // Add your desired class for styling
-		// 	->addItem(new CImg($icon_path)); // Add the icon image
-		
-		// $row->addItem([
-		// 	$icon_col, // Add the icon column first
-		// 	$cell_clock->addClass(ZBX_STYLE_TIMELINE_DATE),
-		// 	(new CCol())
-		// 		->addClass(ZBX_STYLE_TIMELINE_AXIS)
-		// 		->addClass(ZBX_STYLE_TIMELINE_DOT),
-		// 	(new CCol())->addClass(ZBX_STYLE_TIMELINE_TD)
-		// ]);
-		
-			// end New changes
 
 
 			if ($data['show_timeline']) {
