@@ -91,7 +91,6 @@ class WidgetProblems extends CTableInfo {
 			($this->data['fields']['show_opdata'] == OPERATIONAL_DATA_SHOW_SEPARATELY)
 				? _x('Operational data', 'compact table header')
 				: null,
-			_x('Icon', 'compact table header'),
 			_x('Duration', 'compact table header'),
 			_('Update'),
 			_x('Actions', 'compact table header'),
@@ -161,6 +160,47 @@ class WidgetProblems extends CTableInfo {
 	private function addProblemsToTable(array $problems, array $data, $nested): void {
 		foreach ($problems as $problem) {
 			$trigger = $data['triggers'][$problem['objectid']];
+
+
+
+
+
+
+
+			
+
+
+
+
+			//new code
+			$icon_path = "../imgs/NAMUR_Failure.png";
+			//$icon_path = '/path/to/imgs/icon_' . $problem['severity'] . '.png';
+			$icon = new CCol((new CImg($icon_path))->setAttribute('alt', 'Severity Icon'));
+	
+			// Add the icon column to the row
+			$row->addItem($icon);
+	
+			// Continue adding other columns to the row as needed
+			$row->addItem($cell_clock);
+			$row->addItem($description);
+			// Other columns...
+	
+			// Add the completed row to the table
+			$this->addRow($row);
+			//new code
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 			$cell_clock = ($problem['clock'] >= $data['today'])
 				? zbx_date2str(TIME_FORMAT_SECONDS, $problem['clock'])
