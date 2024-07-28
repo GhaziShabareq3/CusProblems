@@ -177,7 +177,7 @@ class WidgetProblems extends CTableInfo {
 
 
 
-
+			$row->addItem('Test');
 
 
 
