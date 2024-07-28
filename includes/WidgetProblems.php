@@ -446,6 +446,22 @@ class WidgetProblems extends CTableInfo {
 					);
 				}
 			}
+			// begin New changes
+			$icon_col = (new CCol())
+			->addClass('icon-class') // Add your desired class for styling
+			->addItem(new CImg('../imgs/NAMUR  Failure.png')); // Add the icon image
+		
+		$row->addItem([
+			$icon_col, // Add the icon column first
+			$cell_clock->addClass(ZBX_STYLE_TIMELINE_DATE),
+			(new CCol())
+				->addClass(ZBX_STYLE_TIMELINE_AXIS)
+				->addClass(ZBX_STYLE_TIMELINE_DOT),
+			(new CCol())->addClass(ZBX_STYLE_TIMELINE_TD)
+		]);
+		
+			// end New changes
+
 
 			if ($data['show_timeline']) {
 				if ($data['last_clock'] != 0) {
