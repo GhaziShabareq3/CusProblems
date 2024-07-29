@@ -21,11 +21,11 @@ use CTableInfo,
 	CWebUser;
 
 use Widgets\Problems\Widget;
-
+$imgPath = '../imgs/Failure.png';
 
 class WidgetProblems extends CTableInfo {
 	private array $data;
-	$imgPath = '../imgs/Failure.png';
+	
 
 	public function __construct(array $data) {
 		$this->data = $data;
