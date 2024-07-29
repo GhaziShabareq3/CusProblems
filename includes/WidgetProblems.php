@@ -422,7 +422,7 @@ class WidgetProblems extends CTableInfo {
 				$row = new CRow();
 					$imgTag = '<img src="' . $this->imgPath . '" alt="Image">';
 					$row->addItem(
-						get_image_by_imageid(195);
+						[get_image_by_imageid(195)]
 					);
 			
 
@@ -559,6 +559,6 @@ class WidgetProblems extends CTableInfo {
 	public function toString($destroy = true): string {
 		$this->build();
 
-		return parent::toString($destroy);
+		return parent::$destroy;
 	}
 }
