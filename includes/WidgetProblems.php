@@ -21,11 +21,11 @@ use CTableInfo,
 	CWebUser;
 
 use Widgets\Problems\Widget;
-$imgPath = '../imgs/Failure.png';
+
 
 class WidgetProblems extends CTableInfo {
 	private array $data;
-	
+	private string $imgPath = '../imgs/Failure.png';
 
 	public function __construct(array $data) {
 		$this->data = $data;
@@ -428,7 +428,7 @@ class WidgetProblems extends CTableInfo {
 				$row = new CRow();
 				
 				$row->addItem(
-					echo '<img src="' . $imgPath . '" alt="Image">';
+					echo '<img src="' . $this->imgPath . '" alt="Image">';
 				);
 
 				if ($problem['symptom_count'] > 0) {
