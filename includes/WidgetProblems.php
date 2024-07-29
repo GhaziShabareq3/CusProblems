@@ -426,11 +426,9 @@ class WidgetProblems extends CTableInfo {
 
 			if ($problem['cause_eventid'] == 0) {
 				$row = new CRow();
-				
-				$row->addItem(
 					$imgTag = '<img src="' . $this->imgPath . '" alt="Image">';
 					$row->addItem($imgTag);
-				);
+			
 
 				if ($problem['symptom_count'] > 0) {
 					// Show symptom counter and collapse/expand button.
