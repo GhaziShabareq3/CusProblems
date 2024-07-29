@@ -25,7 +25,7 @@ use Widgets\Problems\Widget;
 
 class WidgetProblems extends CTableInfo {
 	private array $data;
-	$img = '../imgs/Failure.png'
+	//$img = '../imgs/Failure.png'
 
 	public function __construct(array $data) {
 		$this->data = $data;
