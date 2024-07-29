@@ -428,7 +428,8 @@ class WidgetProblems extends CTableInfo {
 				$row = new CRow();
 				
 				$row->addItem(
-					echo '<img src="' . $this->imgPath . '" alt="Image">';
+					$imgTag = '<img src="' . $this->imgPath . '" alt="Image">';
+					$row->addItem($imgTag);
 				);
 
 				if ($problem['symptom_count'] > 0) {
