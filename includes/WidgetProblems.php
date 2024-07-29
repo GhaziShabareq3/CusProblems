@@ -25,7 +25,7 @@ use Widgets\Problems\Widget;
 
 class WidgetProblems extends CTableInfo {
 	private array $data;
-	private string $imgPath = '../imgs/Failure.png';
+	private string $imgPath = 'https://127.0.0.1/imgstore.php?iconid=195';
 
 	public function __construct(array $data) {
 		$this->data = $data;
@@ -415,12 +415,6 @@ class WidgetProblems extends CTableInfo {
 			}
 
 			// Build rows and columns.
-
-
-
-
-
-
 
 
 
