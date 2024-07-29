@@ -25,7 +25,7 @@ use Widgets\Problems\Widget;
 
 class WidgetProblems extends CTableInfo {
 	private array $data;
-	//$img = '../imgs/Failure.png'
+	$imgPath = '../imgs/Failure.png';
 
 	public function __construct(array $data) {
 		$this->data = $data;
@@ -427,7 +427,9 @@ class WidgetProblems extends CTableInfo {
 			if ($problem['cause_eventid'] == 0) {
 				$row = new CRow();
 				
-				$row->addItem('Test');
+				$row->addItem(
+					echo '<img src="' . $imgPath . '" alt="Image">';
+				);
 
 				if ($problem['symptom_count'] > 0) {
 					// Show symptom counter and collapse/expand button.
