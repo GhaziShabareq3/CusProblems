@@ -559,6 +559,6 @@ class WidgetProblems extends CTableInfo {
 	public function toString($destroy = true): string {
 		$this->build();
 
-		return parent::$destroy;
+		return parent::toString($destroy);
 	}
 }
