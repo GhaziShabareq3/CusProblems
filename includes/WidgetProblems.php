@@ -422,7 +422,7 @@ class WidgetProblems extends CTableInfo {
 				$row = new CRow();
 					$imgTag = '<img src="' . $this->imgPath . '" alt="Image">';
 					$row->addItem(
-						get_default_image()
+						imageThumb(https://optisonic3400.krohne.com/fileadmin/content/_processed_/csm_NAMUR_icons_db84bbce2e.jpg, 3,3)
 					);
 			
 
